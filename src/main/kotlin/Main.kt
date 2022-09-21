@@ -1,6 +1,6 @@
 import ca.tetervak.paperrockscissors.model.Choice
 import ca.tetervak.paperrockscissors.model.PaperRockScissors
-import ca.tetervak.paperrockscissors.model.Result
+import ca.tetervak.paperrockscissors.model.GameResult
 import java.lang.NumberFormatException
 
 fun main() {
@@ -16,9 +16,9 @@ fun main() {
             println("Computer Choice: ${gameData.playerOneChoice}")
             println("Your choice: ${gameData.playerTwoChoice}")
             when(gameData.result){
-                Result.PLAYER_ONE_WINS -> println("Computer wins.")
-                Result.PLAYER_TWO_WINS -> println("You are the winner!")
-                Result.REPLAY -> println("Replay.")
+                GameResult.PLAYER_ONE_WINS -> println("Computer wins.")
+                GameResult.PLAYER_TWO_WINS -> println("You are the winner!")
+                GameResult.REPLAY -> println("Replay.")
             }
         } else {
             println("Invalid input")

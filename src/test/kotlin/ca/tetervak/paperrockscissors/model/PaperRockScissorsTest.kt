@@ -37,37 +37,37 @@ internal class PaperRockScissorsTest {
     fun sameChoice(choice: Choice){
         val gameData = PaperRockScissors.play(choice, choice)
         println("gameData = $gameData")
-        assertEquals(Result.REPLAY, gameData.result)
+        assertEquals(GameResult.REPLAY, gameData.result)
     }
 
     @Test
     fun paperWinsRock(){
         val gameData1 = PaperRockScissors.play(Choice.PAPER, Choice.ROCK)
         println("gameData1 = $gameData1")
-        assertEquals(Result.PLAYER_ONE_WINS, gameData1.result)
+        assertEquals(GameResult.PLAYER_ONE_WINS, gameData1.result)
         val gameData2 = PaperRockScissors.play(Choice.ROCK, Choice.PAPER)
         println("gameData2 = $gameData2")
-        assertEquals(Result.PLAYER_TWO_WINS, gameData2.result)
+        assertEquals(GameResult.PLAYER_TWO_WINS, gameData2.result)
     }
 
     @Test
     fun scissorsWinPaper(){
         val gameData1 = PaperRockScissors.play(Choice.SCISSORS, Choice.PAPER)
         println("gameData1 = $gameData1")
-        assertEquals(Result.PLAYER_ONE_WINS, gameData1.result)
+        assertEquals(GameResult.PLAYER_ONE_WINS, gameData1.result)
         val gameData2 = PaperRockScissors.play(Choice.PAPER, Choice.SCISSORS)
         println("gameData2 = $gameData2")
-        assertEquals(Result.PLAYER_TWO_WINS, gameData2.result)
+        assertEquals(GameResult.PLAYER_TWO_WINS, gameData2.result)
     }
 
     @Test
     fun rockWinsScissors(){
         val gameData1 = PaperRockScissors.play(Choice.ROCK, Choice.SCISSORS)
         println("gameData1 = $gameData1")
-        assertEquals(Result.PLAYER_ONE_WINS, gameData1.result)
+        assertEquals(GameResult.PLAYER_ONE_WINS, gameData1.result)
         val gameData2 = PaperRockScissors.play(Choice.SCISSORS, Choice.ROCK)
         println("gameData2 = $gameData2")
-        assertEquals(Result.PLAYER_TWO_WINS, gameData2.result)
+        assertEquals(GameResult.PLAYER_TWO_WINS, gameData2.result)
     }
 
     @RepeatedTest(10)
